@@ -1,0 +1,42 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        title Document
+        link(href='../bootstrap/bootstrap.min.css' rel='stylesheet')
+        script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js' integrity='sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN' crossorigin='anonymous')
+        style.
+            .carousel img {
+                height: 250px;
+                object-fit:cover;
+                object-position: center;
+                overflow: hidden;
+            }
+
+    body 
+        header 
+            // Navbar 
+            include navbar.pug
+
+        main(role='main')
+            include carousel.pug
+
+            // Grid
+            div.container
+                div.row.mb-5
+                    div.col-sm-3
+                        include card.pug
+                    div.col-sm-3
+                        include card.pug
+                    div.col-sm-3
+                        include card.pug
+                    div.col-sm-3
+                        include card.pug
+
+                div.row
+                    div.col-sm-6
+                        include table.pug
+                    div.col-sm-6
+                        include form.pug
